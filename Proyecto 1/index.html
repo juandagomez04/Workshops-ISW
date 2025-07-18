@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Aventones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="Images/Icono.png" alt="Logo" class="logo">
+      <h1 class="title">AVENTONES</h1>
+    </div>
+
+    <div class="login-form">
+      <button class="google-btn">
+        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" class="google-icon">
+        Sign in with Google
+      </button>
+
+      <div class="separator">Or</div>
+
+      <form>
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password">
+        </div>
+
+        <p class="register-link">
+          Not an user? <a href="register.html">Register Now</a>
+        </p>
+
+        <button type="submit" class="submit-btn login-btn" onclick="window.location.href='myrides.html'; return false;">Login</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+      <nav>
+        <a href="#">Home</a> |
+        <a href="#">Rides</a> |
+        <a href="#">Bookings</a> |
+        <a href="#">Settings</a> |
+        <a href="index.html">Login</a> |
+        <a href="register.html">Register</a>
+      </nav>
+      <p>&copy; Aventones.com</p>
+    </footer>
+</body>
+</html>
