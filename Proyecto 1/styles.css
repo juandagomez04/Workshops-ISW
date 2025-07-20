@@ -27,7 +27,7 @@ body {
 }
 
 .logo {
-  width: 85px;
+  width: 95px;
   height: auto;
 }
 
@@ -112,7 +112,7 @@ select {
 /* Login específico */
 .google-btn {
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid #b6b6b649;
   padding: 10px 20px;
   font-size: 14px;
   display: flex;
@@ -121,6 +121,7 @@ select {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  justify-content: center;
 }
 
 .google-btn:hover {

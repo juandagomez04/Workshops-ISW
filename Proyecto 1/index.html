@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Login - Aventones</title>
+  <title>Inicio de Sesión - Aventones</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -13,41 +15,45 @@
     </div>
 
     <div class="login-form">
-      <button class="google-btn">
+      <a class="google-btn" href="myrides.html">
         <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" class="google-icon">
         Sign in with Google
-      </button>
+      </a>
 
       <div class="separator">Or</div>
 
-      <form>
+      <form action="myrides.html" method="get">
         <div class="field">
           <label for="username">Username</label>
-          <input type="text" id="username">
+          <input type="text" id="username" name="username" required>
         </div>
         <div class="field">
           <label for="password">Password</label>
-          <input type="password" id="password">
+          <input type="password" id="password" name="password" required>
         </div>
 
         <p class="register-link">
-          Not an user? <a href="register.html">Register Now</a>
+          Not a user? <a href="register.html">Register Now</a>
         </p>
 
-        <button type="submit" class="submit-btn login-btn" onclick="window.location.href='myrides.html'; return false;">Login</button>
+        <button type="submit" class="submit-btn login-btn">
+          Login
+        </button>
       </form>
+
     </div>
   </div>
   <footer>
-      <nav>
-        <a href="#">Home</a> |
-        <a href="#">Rides</a> |
-        <a href="#">Bookings</a> |
-        <a href="#">Settings</a> |
-        <a href="index.html">Login</a> |
-        <a href="register.html">Register</a>
-      </nav>
-      <p>&copy; Aventones.com</p>
-    </footer>
+    <nav>
+      <a href="#">Home</a> |
+      <a href="#">Rides</a> |
+      <a href="#">Bookings</a> |
+      <a href="#">Settings</a> |
+      <a href="index.html">Login</a> |
+      <a href="register.html">Register</a>
+    </nav>
+    <p>&copy; Aventones.com</p>
+  </footer>
 </body>
+
 </html>
