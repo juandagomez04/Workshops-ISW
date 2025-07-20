@@ -163,181 +163,53 @@ hr {
   margin: 20px 0;
 }
 
-/* Botón para crear un nuevo viaje */
-.new-ride {
-  float: right;
-  margin-bottom: 15px;
-  padding: 10px 45px;
-  background-color: #3498db;
-  border: 2px solid #466e91;
-  color: white;
-  text-decoration: none;
-  border-radius: 1.5px;
+/* Table */
+.bookings-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-.new-ride:hover {
-  background-color: #2980b9;
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 15px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px 0;
-  font-size: 15px;
+.bookings-table thead {
+    background-color: #eaeaea;
+    text-align: left;
 }
 
-thead {
-  background-color: #f5f5f5;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.bookings-table th,
+.bookings-table td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
 }
 
-th,
-td {
-  padding: 14px 16px;
-  text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+.bookings-table td a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 5px;
 }
 
-th {
-  font-weight: bold;
-  color: #444;
+.bookings-table td a:hover {
+    text-decoration: underline;
 }
 
-tbody tr:hover {
-  background-color: #f9f9f9;
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
-.actions a {
-  color: #3498db;
-  text-decoration: none;
-  font-weight: 500;
-  margin-right: 12px;
-  transition: color 0.2s;
-}
-
-.actions a:hover {
-  color: #1d6fa5;
-  text-decoration: underline;
-}
-
-/* NUEVO: Formulario New Ride */
-.ride-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(8, 8, 8, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.ride-form .row {
-  display: flex;
-  gap: 15px;
-}
-
-.ride-form .field {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.ride-form label {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.ride-form input,
-.ride-form select {
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.days-checkboxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.details_field {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  max-width: 100px;
-  gap: 1px;
-  margin-right: 147px;
-}
-
-.vehicle-details {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-}
-
-.vehicle-details legend {
-  font-weight: bold;
-}
-
-.buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
-  margin-bottom: 80px;
-}
-
-.cancel-btn {
-  background: none;
-  color: #3498db;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-right: auto; 
-}
-
-.cancel-btn:hover {
-  text-decoration: underline;
-}
-
-.next-btn {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.next-btn:hover {
-  background-color: #2980b9;
-}
-
-/* Ride Details */
-.profile-section {
-  width: 100%;
-  margin: 10px 0;
-  font-weight: bold;
-  text-align: center; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
 
 /* Footer */
 footer {
