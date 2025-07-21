@@ -163,6 +163,248 @@ hr {
   margin: 20px 0;
 }
 
+/* Estilos para la caja de filtros */
+.filter-box {
+  border: 1px solid #444;
+  padding: 20px;
+  max-width: 750px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.filter-row label {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.filter-row select {
+  min-width: 150px;
+}
+
+.find-btn {
+  padding: 6px 15px;
+  background-color: #2b7dbf;
+  color: white;
+  border: 1px solid #2b7dbf;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-days {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: nowrap;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+.filter-days label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+
+.find-btn {
+  padding: 6px 15px;
+  background-color: #2b7dbf;
+  color: white;
+  border: 1px solid #2b7dbf;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.find-btn:hover {
+  background-color: #1966a3;
+}
+
+/* Estilos para la tabla de viajes */
+.results {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.rides-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.rides-table thead {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.rides-table th,
+.rides-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.rides-table td a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.rides-table td a:hover {
+  text-decoration: underline;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.map-placeholder {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Formulario de perfil */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 25px; 
+
+}
+
+.row {
+  display: flex;
+  gap: 30px; 
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+}
+
+.field label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.fields textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; 
+  width: 100%;
+}
+
+
+input,
+select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #444;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  align-self: flex-end;
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #125ea9;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cancel-link {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #125ea9;
+}
+
+
+
 /* Footer */
 footer {
   margin-top: 40px;
@@ -183,3 +425,4 @@ footer nav a {
   text-decoration: none;
   margin: 0 5px;
 }
+
