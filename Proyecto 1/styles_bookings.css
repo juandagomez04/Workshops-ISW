@@ -1,16 +1,65 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  color: #333;
+:root {
+  /* ===== Global Theme Variables ===== */
+
+  /* -------- Colors -------- */
+  /* Primary blue for buttons and highlights */
+  --color-primary: #3498db;
+  /* Hover/active variant of primary */
+  --color-primary-dark: #2980b9;
+  /* Border color for inputs and tables */
+  --color-border: #ccc;
+  /* Main body text */
+  --color-text: #333;
+  /* Subheadings and soft text */
+  --color-subtitle: #505050;
+  /* Headings and strong text */
+  --color-heading: #000;
+  /* Muted/gray text for less important info */
+  --color-muted: #777;
+  /* Page background */
+  --color-bg-light: #fafafa;
+  /* Default background for elements */
+  --color-white: #fff;
+  /* Divider and line elements */
+  --color-line: #0f0f0f;
+  --color-divider: #ddd;
+  /* Hover background for dropdowns */
+  --color-hover-bg: #f1f1f1;
+  /* Menu hover highlight */
+  --color-menu-hover: #004074;
+  /* Menu active tab background */
+  --color-menu-active: #007add;
+  /* Table header background */
+  --color-table-header: #eaeaea;
+  /* Link blue */
+  --color-link: #007BFF;
+
+  /* -------- Fonts -------- */
+  --font-main: 'Segoe UI', sans-serif;
+  --font-heading: 'Oswald', Arial, sans-serif;
+
+  /* -------- Layout -------- */
+  --radius-small: 4px;
+  --radius-medium: 6px;
+  --padding-button: 10px 25px;
+  --max-width-content: 900px;
 }
 
-/* Logo + título */
+/* ===== Base Styles ===== */
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 20px;
+  color: var(--color-text);
+  background-color: var(--color-bg-light);
+}
+
+/* ===== Header ===== */
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0px;
+  gap: 0;
   margin-bottom: 10px;
 }
 
@@ -20,23 +69,22 @@ body {
 }
 
 .title {
-  font-family: 'Oswald', Arial, sans-serif;
+  font-family: var(--font-heading);
   font-size: 36px;
-  color: #000;
+  color: var(--color-heading);
   padding: 10px 20px;
   margin: 0;
 }
 
 h2 {
-  color: #505050;
+  color: var(--color-subtitle);
   margin-bottom: 20px;
-  font-family: 'Oswald', Arial, sans-serif;
+  font-family: var(--font-heading);
   font-weight: 300;
   text-align: center;
   padding-bottom: 5px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   width: fit-content;
   position: relative;
 }
@@ -48,7 +96,7 @@ h2::after {
   width: 200%;
   max-width: 120%;
   height: 0.2px;
-  background: #0f0f0f;
+  background: var(--color-line);
   border-radius: 1px;
   position: absolute;
   left: 50%;
@@ -56,10 +104,11 @@ h2::after {
   bottom: 0;
 }
 
+/* ===== Navigation ===== */
 .menu-container {
   width: 100%;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,7 +127,7 @@ h2::after {
 }
 
 .left-menu a {
-  color: #000;
+  color: var(--color-heading);
   font-weight: bold;
   text-decoration: none;
   padding: 10px 15px;
@@ -86,17 +135,18 @@ h2::after {
 }
 
 .left-menu a:hover {
-  background-color: #004074;
-  color: white;
-  border-radius: 4px;
+  background-color: var(--color-menu-hover);
+  color: var(--color-white);
+  border-radius: var(--radius-small);
 }
 
 .left-menu a.active {
-  background-color: #007add;
-  color: white;
+  background-color: var(--color-menu-active);
+  color: var(--color-white);
   border-radius: 1px;
 }
 
+/* ===== Search Bar ===== */
 .center-search {
   flex-grow: 1;
   display: flex;
@@ -108,12 +158,12 @@ h2::after {
   padding: 8px 12px;
   width: 100%;
   max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
   font-size: 14px;
 }
 
-/* Menu de usuario */
+/* ===== User Menu ===== */
 .right-menu {
   display: flex;
   align-items: center;
@@ -134,104 +184,104 @@ h2::after {
   display: none;
   position: absolute;
   right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
   min-width: 150px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-menu a {
-  color: #333;
+  color: var(--color-text);
   padding: 10px 15px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f1f1f1;
+  background-color: var(--color-hover-bg);
 }
 
 .user-btn:hover .dropdown-menu {
   display: block;
 }
 
+/* ===== Divider ===== */
 hr {
   border: 0;
   height: 1px;
-  background-color: #ddd;
+  background-color: var(--color-divider);
   margin: 20px 0;
 }
 
-/* Table */
+/* ===== Bookings Table ===== */
 .bookings-container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 20px;
+  max-width: var(--max-width-content);
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
 .bookings-table {
-    width: 80%;
-    min-width: 400px;
-    max-width: 700px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    background-color: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-    font-size: 15px;
-    height: 300px; /* aumenta la altura de la tabla */
+  width: 80%;
+  min-width: 400px;
+  max-width: 700px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-white);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  font-size: 15px;
+  height: 300px;
 }
 
 .bookings-table thead {
-    background-color: #eaeaea;
-    text-align: left;
+  background-color: var(--color-table-header);
+  text-align: left;
 }
 
 .bookings-table th,
 .bookings-table td {
-    padding: 16px;
-    border-bottom: 1px solid #ddd;
-    vertical-align: middle;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-divider);
+  vertical-align: middle;
 }
 
 .bookings-table td a {
-    color: #007BFF;
-    text-decoration: none;
-    margin: 0 5px;
+  color: var(--color-link);
+  text-decoration: none;
+  margin: 0 5px;
 }
 
 .bookings-table td a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-
-/* Footer */
+/* ===== Footer ===== */
 footer {
   margin-top: 40px;
   font-size: 12px;
-  color: #777;
+  color: var(--color-muted);
   text-align: center;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #fff;
+  background: var(--color-white);
   padding: 10px 0;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
 
 footer nav a {
-  color: #777;
+  color: var(--color-muted);
   text-decoration: none;
   margin: 0 5px;
 }

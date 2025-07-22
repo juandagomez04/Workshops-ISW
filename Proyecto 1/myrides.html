@@ -9,23 +9,28 @@
 </head>
 
 <body>
+    <!-- Header with logo and title -->
     <div class="header">
         <img src="Images/Icono.png" alt="Logo" class="logo">
         <h1 class="title">AVENTONES</h1>
     </div>
 
+    <!-- Navigation menu with search and user profile -->
     <div class="menu-container">
         <div class="menu">
+            <!-- Left navigation links -->
             <nav class="left-menu">
                 <a href="home_searchrides.html">Home</a>
                 <a class="active" href="myrides.html">Rides</a>
                 <a href="bookings.html">Bookings</a>
             </nav>
 
+            <!-- Centered search input -->
             <div class="center-search">
                 <input type="text" placeholder="Search..." class="search-bar">
             </div>
 
+            <!-- Right side: user icon with dropdown menu -->
             <div class="right-menu">
                 <div class="user-btn">
                     <img src="Images/avatar.png" alt="User" class="user-icon">
@@ -41,9 +46,13 @@
 
     <hr>
 
+    <!-- Page title and "New Ride" button -->
     <h2 class="subtitle">My rides</h2>
-    <a href="newride.html" class="new-ride">New Ride</a>
+    <div class="button-container">
+        <a href="newride.html" class="new-ride">New Ride</a>
+    </div>
 
+    <!-- Rides table -->
     <table>
         <thead>
             <tr>
@@ -56,6 +65,7 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Ride 1 -->
             <tr>
                 <td><a href="detailsride.html">Quesada</a></td>
                 <td>Alajuela</td>
@@ -68,6 +78,7 @@
                 </td>
             </tr>
 
+            <!-- Ride 2 -->
             <tr>
                 <td><a href="detailsride.html">Quesada</a></td>
                 <td>Naranjo</td>
@@ -80,6 +91,7 @@
                 </td>
             </tr>
 
+            <!-- Ride 3 -->
             <tr>
                 <td><a href="detailsride.html">Aguas Zarcas</a></td>
                 <td>Naranjo</td>
@@ -94,7 +106,7 @@
         </tbody>
     </table>
 
-
+    <!-- Footer with navigation links -->
     <footer>
         <hr>
         <nav>
@@ -107,7 +119,6 @@
         </nav>
         <p>&copy; Aventones.com</p>
     </footer>
-
 </body>
 
 </html>

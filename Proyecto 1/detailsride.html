@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="styles_rides.css">
 
 </head>
+
 <body>
+    <!-- Header with logo and title -->
     <div class="header">
         <img src="Images/Icono.png" alt="Logo" class="logo">
         <h1 class="title">AVENTONES</h1>
     </div>
 
+    <!-- Top navigation menu -->
     <div class="menu-container">
         <div class="menu">
+            <!-- Left-side navigation links -->
             <nav class="left-menu">
                 <a href="home_searchrides.html">Home</a>
                 <a class="active" href="#">Rides</a>
                 <a href="bookings.html">Bookings</a>
             </nav>
 
+            <!-- Center search bar -->
             <div class="center-search">
                 <input type="text" placeholder="Search..." class="search-bar">
             </div>
 
+            <!-- Right-side user dropdown -->
             <div class="right-menu">
                 <div class="user-btn">
                     <img src="Images/avatar.png" alt="User" class="user-icon">
@@ -38,14 +44,20 @@
     </div>
 
     <hr>
+
+    <!-- Page subtitle -->
     <h2>Ride Details</h2>
 
+    <!-- Profile information -->
     <div class="profile-section">
         <img src="Images/avatar.png" alt="Profile Picture" class="profile-pic">
         <p>juanda_gomez04</p>
     </div>
 
+    <!-- Ride detail form (read-only style) -->
     <form class="ride-form" action="myrides.html" method="get">
+
+        <!-- Departure and arrival information -->
         <div class="row">
             <div class="field">
                 <label for="departure">Departure from</label>
@@ -57,6 +69,7 @@
             </div>
         </div>
 
+        <!-- Selected days -->
         <div class="field days">
             <label>Days</label>
             <div class="days-checkboxes">
@@ -70,6 +83,7 @@
             </div>
         </div>
 
+        <!-- Time, available seats, and fee -->
         <div class="row">
             <div class="details_field">
                 <label for="time">Time</label>
@@ -87,6 +101,7 @@
             </div>
         </div>
 
+        <!-- Vehicle information section -->
         <fieldset class="vehicle-details">
             <legend>Vehicle Details</legend>
             <div class="row">
@@ -107,12 +122,14 @@
             </div>
         </fieldset>
 
+        <!-- Action buttons -->
         <div class="buttons">
             <a href="myrides.html" class="cancel-btn">Cancel</a>
             <button type="submit" class="next-btn">Request</button>
         </div>
     </form>
 
+    <!-- Footer with navigation links -->
     <footer>
         <hr>
         <nav>
@@ -126,4 +143,5 @@
         <p>&copy; Aventones.com</p>
     </footer>
 </body>
+
 </html>

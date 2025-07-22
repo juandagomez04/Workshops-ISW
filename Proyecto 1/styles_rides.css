@@ -1,16 +1,45 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  color: #333;
+:root {
+  /* ===== Global Theme Variables ===== */
+
+  /* Colors */
+  --color-primary: #3498db;
+  --color-primary-dark: #2980b9;
+  --color-accent: #1d6fa5;
+  --color-border: #ccc;
+  --color-heading: #000;
+  --color-subtitle: #505050;
+  --color-muted: #444;
+  --color-separator: #ddd;
+  --color-line: #0f0f0f;
+  --color-bg-light: #fafafa;
+  --color-white: #fff;
+  --color-footer: #777;
+
+  /* Fonts */
+  --font-main: 'Segoe UI', sans-serif;
+  --font-heading: 'Oswald', Arial, sans-serif;
+
+  /* Layout */
+  --radius-small: 4px;
+  --radius-medium: 6px;
+  --padding-button: 10px 30px;
+  --max-width-content: 900px;
 }
 
-/* Logo + título */
+/* === Base Page Styles === */
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 20px;
+  color: var(--color-muted);
+  background-color: var(--color-bg-light);
+}
+
+/* === Header and Title === */
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0px;
   margin-bottom: 10px;
 }
 
@@ -20,23 +49,22 @@ body {
 }
 
 .title {
-  font-family: 'Oswald', Arial, sans-serif;
+  font-family: var(--font-heading);
   font-size: 36px;
-  color: #000;
+  color: var(--color-heading);
   padding: 10px 20px;
   margin: 0;
 }
 
+/* === Section Subtitle === */
 h2 {
-  color: #505050;
+  color: var(--color-subtitle);
   margin-bottom: 20px;
-  font-family: 'Oswald', Arial, sans-serif;
+  font-family: var(--font-heading);
   font-weight: 300;
   text-align: center;
   padding-bottom: 5px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: fit-content;
   position: relative;
 }
@@ -48,7 +76,7 @@ h2::after {
   width: 200%;
   max-width: 120%;
   height: 0.2px;
-  background: #0f0f0f;
+  background: var(--color-line);
   border-radius: 1px;
   position: absolute;
   left: 50%;
@@ -56,10 +84,11 @@ h2::after {
   bottom: 0;
 }
 
+/* === Navigation Bar === */
 .menu-container {
   width: 100%;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,7 +107,7 @@ h2::after {
 }
 
 .left-menu a {
-  color: #000;
+  color: var(--color-heading);
   font-weight: bold;
   text-decoration: none;
   padding: 10px 15px;
@@ -86,17 +115,18 @@ h2::after {
 }
 
 .left-menu a:hover {
-  background-color: #004074;
-  color: white;
-  border-radius: 4px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--radius-small);
 }
 
 .left-menu a.active {
-  background-color: #007add;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border-radius: 1px;
 }
 
+/* === Search Bar and User Menu === */
 .center-search {
   flex-grow: 1;
   display: flex;
@@ -108,12 +138,11 @@ h2::after {
   padding: 8px 12px;
   width: 100%;
   max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
   font-size: 14px;
 }
 
-/* Menu de usuario */
 .right-menu {
   display: flex;
   align-items: center;
@@ -134,15 +163,15 @@ h2::after {
   display: none;
   position: absolute;
   right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
   min-width: 150px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-menu a {
-  color: #333;
+  color: var(--color-text);
   padding: 10px 15px;
   text-decoration: none;
   display: block;
@@ -156,37 +185,46 @@ h2::after {
   display: block;
 }
 
+/* === Horizontal Divider === */
 hr {
   border: 0;
   height: 1px;
-  background-color: #ddd;
+  background-color: var(--color-separator);
   margin: 20px 0;
 }
 
-/* Botón para crear un nuevo viaje */
+/* === "New Ride" Button Container === */
+.button-container {
+  max-width: var(--max-width-content);
+  margin: 0 auto 10px auto;
+  text-align: right;
+  padding: 0 10px;
+}
+
 .new-ride {
-  float: right;
-  margin-bottom: 15px;
-  padding: 10px 45px;
-  background-color: #3498db;
-  border: 2px solid #466e91;
-  color: white;
+  display: inline-block;
+  padding: var(--padding-button);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-accent);
+  color: var(--color-white);
   text-decoration: none;
-  border-radius: 1.5px;
+  border-radius: var(--radius-small);
+  font-weight: bold;
 }
 
 .new-ride:hover {
-  background-color: #2980b9;
+  background-color: var(--color-primary-dark);
 }
 
+/* === Table Styles === */
 table {
   width: 100%;
+  max-width: var(--max-width-content);
+  margin: 20px auto;
   border-collapse: collapse;
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px 0;
+  border-radius: var(--radius-medium);
   font-size: 15px;
 }
 
@@ -196,8 +234,7 @@ thead {
   letter-spacing: 0.5px;
 }
 
-th,
-td {
+th, td {
   padding: 14px 16px;
   text-align: left;
   border-bottom: 1px solid #e0e0e0;
@@ -205,7 +242,7 @@ td {
 
 th {
   font-weight: bold;
-  color: #444;
+  color: var(--color-muted);
 }
 
 tbody tr:hover {
@@ -213,7 +250,7 @@ tbody tr:hover {
 }
 
 .actions a {
-  color: #3498db;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
   margin-right: 12px;
@@ -221,18 +258,18 @@ tbody tr:hover {
 }
 
 .actions a:hover {
-  color: #1d6fa5;
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
-/* NUEVO: Formulario New Ride */
+/* === Ride Form Section === */
 .ride-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background: #fff;
+  background: var(--color-white);
   padding: 20px;
-  border-radius: 6px;
+  border-radius: var(--radius-medium);
   box-shadow: 0 2px 6px rgba(8, 8, 8, 0.1);
   max-width: 600px;
   margin: 0 auto;
@@ -257,10 +294,11 @@ tbody tr:hover {
 .ride-form input,
 .ride-form select {
   padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
 }
 
+/* === Days Checkboxes === */
 .days-checkboxes {
   display: flex;
   flex-wrap: wrap;
@@ -269,6 +307,7 @@ tbody tr:hover {
   align-items: center;
 }
 
+/* === Ride Time and Seats Fields === */
 .details_field {
   flex: 1;
   display: flex;
@@ -278,9 +317,10 @@ tbody tr:hover {
   margin-right: 147px;
 }
 
+/* === Vehicle Details Section === */
 .vehicle-details {
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
   padding: 10px;
 }
 
@@ -288,6 +328,7 @@ tbody tr:hover {
   font-weight: bold;
 }
 
+/* === Form Action Buttons === */
 .buttons {
   display: flex;
   justify-content: flex-end;
@@ -298,10 +339,10 @@ tbody tr:hover {
 
 .cancel-btn {
   background: none;
-  color: #3498db;
+  color: var(--color-primary);
   text-decoration: none;
-  border-radius: 4px;
-  margin-right: auto; 
+  border-radius: var(--radius-small);
+  margin-right: auto;
 }
 
 .cancel-btn:hover {
@@ -309,24 +350,24 @@ tbody tr:hover {
 }
 
 .next-btn {
-  background-color: #3498db;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-small);
   padding: 8px 12px;
   cursor: pointer;
 }
 
 .next-btn:hover {
-  background-color: #2980b9;
+  background-color: var(--color-primary-dark);
 }
 
-/* Ride Details */
+/* === Profile Picture Section === */
 .profile-section {
   width: 100%;
   margin: 10px 0;
   font-weight: bold;
-  text-align: center; 
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -339,23 +380,23 @@ tbody tr:hover {
   margin-bottom: 10px;
 }
 
-/* Footer */
+/* === Footer === */
 footer {
   margin-top: 40px;
   font-size: 12px;
-  color: #777;
+  color: var(--color-footer);
   text-align: center;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #fff;
+  background: var(--color-white);
   padding: 10px 0;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
 
 footer nav a {
-  color: #777;
+  color: var(--color-footer);
   text-decoration: none;
   margin: 0 5px;
 }

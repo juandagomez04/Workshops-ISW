@@ -11,15 +11,19 @@
 <body>
   <div class="container">
 
+    <!-- Header with logo and title -->
     <div class="header">
       <img src="Images/Icono.png" alt="Logo" class="logo">
       <h1 class="title">AVENTONES</h1>
     </div>
 
+    <!-- Page subtitle -->
     <h2 class="subtitle">Provider Registration</h2>
 
+    <!-- Provider registration form -->
     <form class="form" action="index.html" method="get">
-      <!-- Nombre y apellidos -->
+
+      <!-- Row: First and Last Name -->
       <div class="row">
         <div class="field">
           <label for="fname">First Name</label>
@@ -31,19 +35,19 @@
         </div>
       </div>
 
-      <!-- Cédula -->
+      <!-- Field: National ID -->
       <div class="field">
         <label for="cedula">National ID (Cédula)</label>
         <input type="text" id="cedula" name="cedula" maxlength="12" required>
       </div>
 
-      <!-- Fecha de nacimiento -->
+      <!-- Field: Date of Birth -->
       <div class="field">
         <label for="dob">Date of Birth</label>
         <input type="date" id="dob" name="dob" required>
       </div>
 
-      <!-- Correo y teléfono -->
+      <!-- Row: Email and Phone -->
       <div class="row">
         <div class="field">
           <label for="email">Email</label>
@@ -51,11 +55,11 @@
         </div>
         <div class="field">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{8,15}" placeholder="ej: 88888888" required>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{8,15}" placeholder="e.g., 88888888" required>
         </div>
       </div>
 
-      <!-- Datos del vehículo -->
+      <!-- Row: Vehicle brand and model -->
       <div class="row">
         <div class="field">
           <label for="brand">Vehicle Brand</label>
@@ -67,6 +71,7 @@
         </div>
       </div>
 
+      <!-- Row: Year and license plate -->
       <div class="row">
         <div class="field">
           <label for="year">Year</label>
@@ -78,9 +83,17 @@
         </div>
       </div>
 
+      <!-- Links for login and driver registration -->
+      <div class="links">
+        <p class="login-link">Already a driver? <a href="index.html">Login here</a></p>
+        <p class="register-driver-link">Register as user?<a href="register.html">Click here</a></p>
+      </div>
+
+      <!-- Submit button -->
       <button type="submit" class="submit-btn">Register</button>
     </form>
 
+    <!-- Footer with navigation links -->
     <footer>
       <hr>
       <nav>

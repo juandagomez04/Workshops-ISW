@@ -9,23 +9,29 @@
 </head>
 
 <body>
+    <!-- Header with logo and site title -->
     <div class="header">
         <img src="Images/Icono.png" alt="Logo" class="logo">
         <h1 class="title">AVENTONES</h1>
     </div>
 
+    <!-- Top navigation menu with left links, center search, and right user menu -->
     <div class="menu-container">
         <div class="menu">
+            
+            <!-- Left-side navigation -->
             <nav class="left-menu">
                 <a class="active" href="#">Home</a>
                 <a href="myrides.html">Rides</a>
                 <a href="bookings.html">Bookings</a>
             </nav>
 
+            <!-- Centered search input -->
             <div class="center-search">
                 <input type="text" placeholder="Search..." class="search-bar">
             </div>
 
+            <!-- Right-side user icon with dropdown options -->
             <div class="right-menu">
                 <div class="user-btn">
                     <img src="Images/avatar.png" alt="User" class="user-icon">
@@ -40,19 +46,21 @@
     </div>
 
     <hr>
+
+    <!-- Page heading -->
     <h2>Search Rides</h2>
 
-    <!-- Filtros -->
+    <!-- Filter form for searching rides -->
     <div class="filter-box">
         <form action="#" method="get" class="filter-form">
 
+            <!-- Origin, destination, and submit button -->
             <div class="filter-row">
                 <label for="from">From</label>
                 <select id="from" name="from">
                     <option>Quesada</option>
                     <option>San José</option>
                     <option>Heredia</option>
-
                 </select>
 
                 <label for="to">To</label>
@@ -65,6 +73,7 @@
                 <button type="submit" class="find-btn">Find rides</button>
             </div>
 
+            <!-- Days of the week checkboxes -->
             <div class="filter-days">
                 <label>Days</label>
                 <label><input type="checkbox" name="days" checked> Mon</label>
@@ -78,7 +87,7 @@
         </form>
     </div>
 
-    <!-- Resultados -->
+    <!-- Search results table -->
     <div class="results">
         <p>Rides found from <strong><em>Quesada</em></strong> to <strong><em>Zarcero</em></strong></p>
 
@@ -95,6 +104,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Ride result 1 -->
                 <tr>
                     <td><img src="Images/avatar.png" alt="avatar" class="avatar"> juanda_gomez04</td>
                     <td><a href="#">Quesada</a></td>
@@ -104,6 +114,8 @@
                     <td>$15</td>
                     <td><a href="#">Request</a></td>
                 </tr>
+
+                <!-- Ride result 2 -->
                 <tr>
                     <td><img src="Images/avatar.png" alt="avatar" class="avatar"> barroyo</td>
                     <td><a href="#">Quesada</a></td>
@@ -113,6 +125,8 @@
                     <td>$10</td>
                     <td><a href="#">Request</a></td>
                 </tr>
+
+                <!-- Ride result 3 -->
                 <tr>
                     <td><img src="Images/avatar.png" alt="avatar" class="avatar"> juanito24</td>
                     <td><a href="#">Aguas Zarcas</a></td>
@@ -126,13 +140,12 @@
         </table>
     </div>
 
-    <!-- Mapa simulado -->
+    <!-- Static map image preview -->
     <div class="map-placeholder">
         <img src="Images/ruta.png" alt="Map preview" style="width: 100%; max-width: 700px;">
     </div>
 
-
-
+    <!-- Footer with navigation links -->
     <footer>
         <hr>
         <nav>
@@ -146,5 +159,6 @@
         <p>&copy; Aventones.com</p>
     </footer>
 </body>
+
 
 </html>
