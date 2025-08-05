@@ -60,10 +60,12 @@
 
   <?php
     $dirs = array_filter(glob('*'), 'is_dir');
+    $dirs = array_filter($dirs, function($dir) {
+      return $dir != 'extra' && $dir != '.' && $dir != '..';
+    });
+    sort($dirs, SORT_NATURAL | SORT_FLAG_CASE);
     foreach ($dirs as $dir) {
-      if ($dir != 'extra' && $dir != '.' && $dir != '..') {
-        echo "<a class='workshop-link' href='$dir/'>💻 $dir</a>";
-      }
+      echo "<a class='workshop-link' href='$dir/'>💻 $dir</a>";
     }
   ?>
 
