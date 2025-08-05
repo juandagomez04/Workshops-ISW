@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Add author</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/template.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="d-flex flex-column">
+            <h1>Add new author</h1>
+            <div class="form-contact-info">
+                <div class="error_msg" id="error_msg"></div>
+                <form id="author-form">
+                    <input type="text" class="form-input" name="author-name" value="" placeholder="Type author name" class="required" id="name"  />
+                    <input type="button" value="Add" id="add-author-button" />
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addAuthor(){
+            const authorName = $('#name').val().trim();
+            if (!authorName) {
+                $('#error_msg').text('Please enter an author name.');
+                return;
+            }
+            let authorsDb = JSON.parse(localStorage.getItem('authors'));
+            if(!authorsDb) {
+                authorsDb = [];
+            }
+            // Check if author name already exists (case-insensitive)
+            const exists = authorsDb.some(author => author.name.toLowerCase() === authorName.toLowerCase());
+            if (exists) {
+                $('#error_msg').text('Author name already exists.');
+                return;
+            }
+            const author = {
+                name: authorName,
+                id: authorsDb.length + 1
+            }
+            authorsDb.push(author);
+            localStorage.setItem('authors', JSON.stringify(authorsDb));
+            console.log(JSON.parse(localStorage.getItem('authors')));
+            window.location.reload();
+        }
+
+        function loadAuthors(){
+            const authors = JSON.parse(localStorage.getItem('authors'));
+            if(authors) {
+                let options = "";
+                authors.forEach((author) => {
+                    options += `<option value="${author.id}">${author.name}</option>`;
+                })
+                document.getElementById('authors-list').innerHTML = options;
+            }
+        }
+
+        $('#add-author-button').bind('click', function(){
+            addAuthor();
+        });
+        loadAuthors();
+    </script>
+</body>
+
+</html>
